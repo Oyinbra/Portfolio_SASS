@@ -1,4 +1,4 @@
-@use 'config';
+@use 'config' as *;
 
 // TABLETS & SMALLER
 @media (max-width: 800px) {
@@ -25,7 +25,7 @@
   #header {
     &-home {
       height: 10rem;
-      border-bottom: 3px solid config.$main-color;
+      border-bottom: 3px solid $main-color;
       background-position: 20% 30%;
 
       .header-content {
@@ -53,7 +53,7 @@
   #home {
     &-a {
       .specials div {
-        border-bottom: 1px solid config.$light-color;
+        border-bottom: 1px solid $light-color;
         padding-bottom: 1rem;
 
         &:last-child{

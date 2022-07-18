@@ -1,6 +1,6 @@
-@use 'config';
-@use 'utilities';
-@use 'items_grid';
+@use 'config' as *;
+@use 'utilities' as *;
+@use 'items_grid' as *;
 
 // General Styles
 * {
@@ -16,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: config.$dark-color;
+  color: $dark-color;
 }
 
 ul {
@@ -66,11 +66,11 @@ img {
     transition: border-color 0.5s;
 
     &:hover {
-      border-color: config.$medium-color;
+      border-color: $medium-color;
     }
   
     &.current {
-      border-color: config.$main-color;
+      border-color: $main-color;
     }
   }
 }
@@ -79,7 +79,7 @@ img {
 #header {
   // Header Home
   &-home {
-    background: config.$bg-image no-repeat center right / cover;
+    background: $bg-image no-repeat center right / cover;
     height: 100vh;
     color: #fff;
 
@@ -97,9 +97,9 @@ img {
 
   // Header Inner
   &-inner {
-    background: config.$bg-image no-repeat 20% 30% / cover;
+    background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
-    border-bottom: 3px solid config.$main-color;
+    border-bottom: 3px solid $main-color;
   }
 }
 
@@ -114,7 +114,7 @@ img {
       grid-template-columns: repeat(4, 1fr);
 
       .fas {
-        color: config.$main-color;
+        color: $main-color;
         padding: 0.4rem;
       }
     }
@@ -143,11 +143,11 @@ img {
         padding: 3rem 0;
 
         &:nth-child(odd) {
-          background: config.$light-color;
+          background: $light-color;
         }
 
         &:nth-child(even) {
-          background: config.$medium-color;
+          background: $medium-color;
         }
       }
     }
@@ -167,8 +167,8 @@ img {
         top: 0%;
         right: 0;
         font-size: 28px;
-        background: config.$main-color;
-        color: config.set-text-color(config.$main-color);
+        background: $main-color;
+        color: set-text-color($main-color);
         border-radius: 50%;
         height: 15px;
         width: 15px;
@@ -179,8 +179,8 @@ img {
       // Process-Icon
       &-icon {
         border-radius: 50%;
-        background: config.$dark-color;
-        color: config.set-text-color(config.$dark-color);
+        background: $dark-color;
+        color: set-text-color($dark-color);
         padding: 2rem;
         width: 70px;
         height: 70px;
@@ -191,14 +191,14 @@ img {
         transition: all 1s;
 
         &:hover {
-          background: config.$main-color;
+          background: $main-color;
           width: 90px;
           height: 90px;
           line-height: 90px;
 
           .process-step {
-            background: config.$dark-color;
-            color: config.set-text-color(config.$dark-color);
+            background: $dark-color;
+            color: set-text-color($dark-color);
           }
         }
       }
@@ -224,7 +224,7 @@ img {
 
     .bio {
       grid-area: bio;
-      border-left: 3px solid config.$main-color;
+      border-left: 3px solid $main-color;
     }
 
     .award-1 {
@@ -242,7 +242,7 @@ img {
     .award-1 .fas,
     .award-2 .fas,
     .award-3 .fas {
-      color: config.$main-color;
+      color: $main-color;
       margin: 1rem;
     }
   }
@@ -252,7 +252,7 @@ img {
       .progress {
         overflow: hidden;
         height: 20px;
-        background: config.$medium-color;
+        background: $medium-color;
         border-radius: 5px;
         margin-bottom: 0.3rem;
 
@@ -260,7 +260,7 @@ img {
           height: 100%;
           color: #fff;
           text-align: center;
-          background-color: config.$main-color;
+          background-color: $main-color;
 
         }
       }
@@ -292,7 +292,7 @@ img {
       }
 
       p {
-        border: 1px solid config.$medium-color;
+        border: 1px solid $medium-color;
         border-radius: 5px;
         padding: 0.5rem;
       }
@@ -366,7 +366,7 @@ img {
 
 // FOOTER
 #main-footer {
-  background: config.$dark-color;
+  background: $dark-color;
   color: #fff;
   height: 5rem;
 
@@ -387,7 +387,7 @@ img {
       padding: 0.5rem;
 
       &:hover {
-        background: config.$main-color;
+        background: $main-color;
       }
     }
   }

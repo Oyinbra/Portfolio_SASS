@@ -1,6 +1,6 @@
-@use 'config';
+@use 'config' as *;
 .container {
-  max-width: config.$website-width;
+  max-width: $website-width;
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden;
@@ -19,49 +19,49 @@
 .btn {
   &-main {
     @extend %btn-shared;
-    color: config.$dark-color;
-    background-color: config.$main-color;
+    color: $dark-color;
+    background-color: $main-color;
   }
 
   &-light {
     @extend %btn-shared;
-    color: config.$dark-color;
-    background-color: config.$light-color;
+    color: $dark-color;
+    background-color: $light-color;
   }
 
   &-dark {
     @extend %btn-shared;
-    color: config.$light-color;
-    background-color: config.$dark-color;
+    color: $light-color;
+    background-color: $dark-color;
   }
 }
 
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
 input[class^='btn-']:hover {
-  background-color: config.$main-color;
+  background-color: $main-color;
 }
 
 // BACKGROUND
 .bg {
   &-main {
-    background: config.$main-color;
-    color: config.set-text-color(config.$main-color);
+    background: $main-color;
+    color: set-text-color($main-color);
   }
 
   &-dark {
-    background: config.$dark-color;
-    color: config.set-text-color(config.$dark-color);
+    background: $dark-color;
+    color: set-text-color($dark-color);
   }
 
   &-light {
-    background: config.$light-color;
-    color: config.set-text-color(config.$light-color);
+    background: $light-color;
+    color: set-text-color($light-color);
   }
 
   &-medium {
-    background: config.$medium-color;
-    color: config.set-text-color(config.$medium-color);
+    background: $medium-color;
+    color: set-text-color($medium-color);
   }
 }
 
@@ -118,7 +118,7 @@ input[class^='btn-']:hover {
 .bottom-line {
   height: 2px;
   width: 3rem;
-  background: config.$main-color;
+  background: $main-color;
   display: block;
   margin: 0 auto 1rem auto;
 }
